@@ -15,6 +15,13 @@ class CreateTripsTable extends Migration
     {
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
+            $table->string('title',100);
+            $table->string('location',100);
+            $table->text('description');
+            $table->text('url');
+            $table->string('title_review',100);
+            $table->text('review');
+            $table->date('date_review');
             $table->timestamps();
         });
     }
